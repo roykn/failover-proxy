@@ -1,11 +1,30 @@
 # Failover proxy
 
+[![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](http://golang.org)
+
 ## About the project
 This project is the playground for a real world use case i had lately.
 
-### Build With
-* [Golang](https://golang.org/)
+## Usage
+In order o try it out yourself you have to follow the following steps:
+1. Start the server
+```bash
+go run ./cmd/server/main.go
+```
 
+2. Start the proxy
+```bash
+go run ./cmd/proxy/main.go
+```
+
+3. Open your browser and navigate to [http://localhost:8081](http://localhost:8081)
+you should see the servers response.
+
+4. Stop the server with Ctrl+C
+
+5. Again navigate to [http://localhost:8081](http://localhost:8081) in your browser
+
+Even though the server is down you will get a response.
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
